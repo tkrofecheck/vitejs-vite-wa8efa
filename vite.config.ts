@@ -26,7 +26,6 @@ export default defineConfig({
     cssCodeSplit: false,
     lib: {
       ...currentConfig,
-      formats: [],
     },
     rollupOptions: {
       output: {
