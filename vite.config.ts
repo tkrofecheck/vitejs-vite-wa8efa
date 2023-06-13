@@ -15,7 +15,7 @@ const config = {
   },
 };
 
-const currentConfig = config[process.env.LIB_NAME];
+const currentConfig = config[import.meta.env.LIB_NAME];
 
 if (currentConfig === undefined) {
   throw new Error('LIB_NAME is not defined or is not valid');
