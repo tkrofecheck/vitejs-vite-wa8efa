@@ -29,5 +29,14 @@ export default defineConfig({
       ...currentConfig,
       formats: [],
     },
+    rollupOptions: {
+      output: {
+        dir: '../dist',
+        manualChunks: undefined,
+        assetFileNames: '[name][extname]',
+        chunkFileNames: 'lrs.[hash].js',
+        entryFileNames: 'lrs.js',
+      },
+    },
   },
 });
