@@ -1,8 +1,5 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
-import autoPreprocess from 'svelte-preprocess';
-import typescript from '@rollup/plugin-typescript';
 
 // https://vitejs.dev/config/
 
@@ -24,13 +21,7 @@ if (currentConfig === undefined) {
 }
 
 export default defineConfig({
-  plugins: [
-    cssInjectedByJsPlugin(),
-    svelte({
-      preprocess: autoPreprocess(),
-    }),
-    typescript(),
-  ],
+  plugins: [svelte()],
   build: {
     cssCodeSplit: false,
     lib: {
