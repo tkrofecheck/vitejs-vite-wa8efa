@@ -1,4 +1,3 @@
-import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 
@@ -6,11 +5,11 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 const config = {
   poc: {
-    entry: resolve('./src/main.poc.ts'),
+    entry: '/src/main.poc.ts',
     fileName: 'lrs-poc.js',
   },
   prod: {
-    entry: resolve('./src/main.prod.ts'),
+    entry: '/src/main.prod.ts',
     fileName: 'lrs.js',
   },
 };
